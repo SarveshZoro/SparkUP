@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SparkUP</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <!-- Background video -->
+  <video autoplay muted loop id="bg-video">
+    <source src="{{ url_for('static', filename='galaxy.mp4.mp4') }}" type="video/mp4">
+  </video>
+
+  <!-- Logo and heading -->
+  <div class="container">
+    <div class="logo-header">
+      <img src="{{ url_for('static', filename='images/SparkUP.png') }}" alt="SparkUP Logo" class="logo">
+      <h1>SparkUP</h1>
+    </div>
+
+    <div id="chat-box"></div>
+    <input type="text" id="user-input" placeholder="Type your message..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
